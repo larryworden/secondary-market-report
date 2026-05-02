@@ -41,7 +41,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── HEADER ─────────────────────────────── */
+  /* HEADER */
   .post-header {
     background: var(--navy);
     padding: 36px 44px 32px;
@@ -71,20 +71,17 @@
 
   .post-headline {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 4vw, 36px);
+    font-size: clamp(22px, 5vw, 36px);
     font-weight: 900;
     color: var(--cream);
     line-height: 1.18;
     margin-bottom: 14px;
   }
 
-  .post-headline em {
-    color: var(--orange);
-    font-style: italic;
-  }
+  .post-headline em { color: var(--orange); font-style: italic; }
 
   .post-subhead {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     font-weight: 300;
     font-style: italic;
     color: var(--light);
@@ -92,14 +89,14 @@
     max-width: 520px;
   }
 
-  /* ── BODY ───────────────────────────────── */
+  /* BODY */
   .post-body {
     background: var(--cream);
     padding: 40px 44px;
   }
 
   .intro-pull {
-    font-size: 16px;
+    font-size: clamp(14px, 2.2vw, 16px);
     font-style: italic;
     font-weight: 300;
     color: var(--ink);
@@ -109,7 +106,7 @@
     margin-bottom: 32px;
   }
 
-  /* ── STAT STRIP ─────────────────────────── */
+  /* STAT STRIP */
   .stat-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -140,7 +137,7 @@
 
   .stat-num {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: clamp(18px, 3.5vw, 28px);
     font-weight: 900;
     color: var(--orange);
     line-height: 1;
@@ -150,7 +147,7 @@
 
   .stat-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: clamp(7px, 1.2vw, 9px);
     letter-spacing: 1px;
     color: var(--light);
     line-height: 1.4;
@@ -165,7 +162,7 @@
     font-family: 'DM Mono', monospace;
   }
 
-  /* ── SECTION LABEL ──────────────────────── */
+  /* SECTION LABEL */
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
@@ -185,7 +182,7 @@
     background: var(--warm);
   }
 
-  /* ── INSIGHTS ───────────────────────────── */
+  /* INSIGHTS */
   .insights { margin-bottom: 32px; }
 
   .insight {
@@ -212,8 +209,7 @@
 
   .insight-marker {
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     background: var(--navy);
     border-radius: 2px;
     display: flex;
@@ -229,23 +225,18 @@
     color: var(--orange);
   }
 
-  .insight-content {}
-
   .insight-title {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     font-weight: 400;
     font-style: italic;
     color: var(--navy);
     margin-bottom: 4px;
   }
 
-  .insight-title strong {
-    font-style: normal;
-    font-weight: 400;
-  }
+  .insight-title strong { font-style: normal; font-weight: 400; }
 
   .insight-body {
-    font-size: 13px;
+    font-size: clamp(12px, 1.8vw, 13px);
     font-weight: 300;
     color: #3a3530;
     line-height: 1.65;
@@ -259,14 +250,9 @@
     font-size: 14px;
   }
 
-  /* ── DIVIDER ────────────────────────────── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--warm);
-    margin: 28px 0;
-  }
+  .divider { border: none; border-top: 1px solid var(--warm); margin: 28px 0; }
 
-  /* ── CTA BLOCK ──────────────────────────── */
+  /* CTA BLOCK */
   .cta-block {
     background: var(--navy);
     border-left: 4px solid var(--orange);
@@ -296,7 +282,7 @@
 
   .cta-headline {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: clamp(17px, 3vw, 20px);
     font-weight: 700;
     color: var(--cream);
     line-height: 1.3;
@@ -304,7 +290,7 @@
   }
 
   .cta-body {
-    font-size: 13px;
+    font-size: clamp(12px, 1.8vw, 13px);
     font-weight: 300;
     color: var(--light);
     line-height: 1.65;
@@ -349,6 +335,7 @@
     cursor: pointer;
     border-radius: 2px;
     transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
   }
 
   .btn-primary:hover { background: #ffaa33; }
@@ -367,20 +354,19 @@
     cursor: pointer;
     border-radius: 2px;
     transition: border-color 0.2s, color 0.2s;
+    white-space: nowrap;
   }
 
   .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
 
-  /* ── CLOSING ────────────────────────────── */
   .closing {
-    font-size: 14px;
+    font-size: clamp(13px, 2vw, 14px);
     font-style: italic;
     color: var(--ink);
     line-height: 1.7;
     margin-bottom: 28px;
   }
 
-  /* ── TAGS ───────────────────────────────── */
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -402,7 +388,6 @@
 
   .tag:hover { background: var(--navy); color: var(--cream); }
 
-  /* ── SOURCE LINE ────────────────────────── */
   .source-line {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
@@ -410,9 +395,9 @@
     letter-spacing: 0.5px;
     border-top: 1px solid var(--stone);
     padding-top: 16px;
+    line-height: 1.7;
   }
 
-  /* ── COPY BUTTON ────────────────────────── */
   .copy-btn {
     display: block;
     width: 100%;
@@ -426,139 +411,201 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.2s;
-    margin-top: 0;
   }
 
   .copy-btn:hover { background: var(--orange); color: var(--navy); }
   .copy-btn:active { transform: scale(0.99); }
 
-  /* Modal overlay */
+  /* ═══════════════════════════════════════════
+     MODAL — Google Form Panel
+  ═══════════════════════════════════════════ */
   .modal-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(10,10,20,0.85);
-    z-index: 100;
-    align-items: center;
+    background: rgba(10,10,20,0.92);
+    z-index: 200;
+    align-items: flex-start;
     justify-content: center;
-    padding: 24px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 32px 16px 48px;
   }
 
   .modal-overlay.open { display: flex; }
 
   .modal {
-    background: var(--cream);
-    max-width: 480px;
+    background: var(--navy);
     width: 100%;
+    max-width: 680px;
     border-top: 4px solid var(--orange);
-    padding: 36px;
+    border-radius: 2px;
+    margin: auto;
     animation: rise 0.4s cubic-bezier(0.22,1,0.36,1) both;
+    overflow: hidden;
+  }
+
+  .modal-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid rgba(255,140,0,0.2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--navy);
+  }
+
+  .modal-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 6px;
   }
 
   .modal-title {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: clamp(18px, 3.5vw, 22px);
     font-weight: 700;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .modal-close {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 2px;
+    color: var(--light);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    font-family: 'DM Mono', monospace;
+    line-height: 1;
+  }
+
+  .modal-close:hover {
+    background: var(--orange);
     color: var(--navy);
-    margin-bottom: 8px;
+    border-color: var(--orange);
   }
 
   .modal-sub {
-    font-size: 13px;
+    padding: 14px 28px 16px;
+    font-size: clamp(12px, 1.8vw, 13px);
     font-style: italic;
-    color: var(--muted);
-    margin-bottom: 24px;
-    line-height: 1.5;
-  }
-
-  .form-group { margin-bottom: 16px; }
-
-  .form-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .form-input {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1px solid var(--warm);
-    background: white;
-    font-family: 'Source Serif 4', serif;
-    font-size: 14px;
-    color: var(--ink);
-    outline: none;
-    border-radius: 2px;
-    transition: border-color 0.2s;
-  }
-
-  .form-input:focus { border-color: var(--orange); }
-
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-  .modal-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-  }
-
-  .modal-submit {
-    flex: 1;
-    background: var(--navy);
-    color: var(--cream);
-    border: none;
-    padding: 13px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: background 0.2s;
-  }
-
-  .modal-submit:hover { background: var(--orange); color: var(--navy); }
-
-  .modal-cancel {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--warm);
-    padding: 13px 20px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: border-color 0.2s;
-  }
-
-  .modal-cancel:hover { border-color: var(--muted); }
-
-  .success-msg {
-    display: none;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .success-msg .check {
-    font-size: 40px;
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  .success-msg p {
-    font-size: 14px;
-    color: var(--ink);
+    color: var(--light);
     line-height: 1.6;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: var(--navy);
   }
 
-  /* Hidden copy textarea */
-  #post-text { position: absolute; left: -9999px; }
+  /* Google Form iframe wrapper */
+  .gform-wrap {
+    background: #fff;
+    width: 100%;
+  }
+
+  .gform-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    /* height set by JS per device */
+  }
+
+  /* Hidden textarea */
+  #post-text { position: absolute; left: -9999px; top: 0; }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE — Tablet ≤768px
+  ═══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    body { padding: 0 0 60px; }
+    .wrapper { max-width: 100%; }
+
+    .post-header { padding: 28px 20px 24px; }
+    .post-body   { padding: 28px 20px 32px; }
+
+    .stat-strip  { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell   { padding: 16px 12px 14px; }
+
+    .cta-block { padding: 22px 20px; }
+
+    .cta-action {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      text-align: center;
+      padding: 14px 20px;
+    }
+
+    .modal-overlay { padding: 20px 12px 40px; }
+
+    .modal-header { padding: 20px 20px 16px; }
+    .modal-sub    { padding: 12px 20px 14px; }
+  }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE — Mobile ≤480px
+  ═══════════════════════════════════════════ */
+  @media (max-width: 480px) {
+    .post-header { padding: 22px 16px 20px; }
+    .post-body   { padding: 22px 16px 28px; }
+
+    .insight { gap: 12px; }
+    .insight-marker { width: 28px; height: 28px; }
+    .insight-marker span { font-size: 12px; }
+
+    .cta-block { padding: 18px 16px; }
+
+    .tags { gap: 6px; }
+    .tag  { font-size: 9px; padding: 4px 8px; }
+
+    .copy-btn { font-size: 9px; padding: 14px; }
+
+    /* Full-screen modal on mobile */
+    .modal-overlay {
+      padding: 0;
+      align-items: flex-start;
+    }
+
+    .modal {
+      margin: 0;
+      min-height: 100dvh;
+      min-height: 100vh;
+      border-radius: 0;
+      border-top-width: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gform-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gform-wrap iframe {
+      flex: 1;
+    }
+
+    .modal-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 16px;
+    }
+
+    .modal-sub { padding: 12px 16px; }
+  }
 </style>
 </head>
 <body>
@@ -582,7 +629,6 @@
       Global smartphone shipments are falling 12.9% in 2026. Average selling prices are hitting a record $523. The Strait of Hormuz is partially closed. And 150 million high-value phones sit idle in American homes. The secondary market has never had a more compelling structural case — or a more complex operating environment.
     </p>
 
-    <!-- STAT STRIP -->
     <div class="stat-strip">
       <div class="stat-cell">
         <span class="stat-num">-12.9%</span>
@@ -609,7 +655,6 @@
     <div class="section-label">Five Things Secondary Market Operators Need to Know</div>
 
     <div class="insights">
-
       <div class="insight">
         <div class="insight-marker"><span>1</span></div>
         <div class="insight-content">
@@ -617,7 +662,6 @@
           <div class="insight-body">Samsung, SK Hynix, and Micron have permanently reallocated DRAM and NAND capacity to AI datacenters. New fab capacity won't reach volume until 2027. The sub-$100 smartphone segment — <span class="stat-inline">171M devices</span> — is, in IDC's words, permanently uneconomical. There is no return to business as usual.</div>
         </div>
       </div>
-
       <div class="insight">
         <div class="insight-marker"><span>2</span></div>
         <div class="insight-content">
@@ -625,7 +669,6 @@
           <div class="insight-body">Apple led the global primary market for the first time in Q1 2026 with <span class="stat-inline">21% share and +5% YoY growth</span> — the only top brand growing. iPhones retain 60–70% of value after two years. Xiaomi fell <span class="stat-inline">-19% YoY</span>, the sharpest decline among the top five. The secondary market mirrors whoever wins new.</div>
         </div>
       </div>
-
       <div class="insight">
         <div class="insight-marker"><span>3</span></div>
         <div class="insight-content">
@@ -633,7 +676,6 @@
           <div class="insight-body">IDC projects Middle East & Africa new smartphone shipments down <span class="stat-inline">-20.6%</span> in 2026 — the steepest regional decline globally. The Strait of Hormuz closure has disrupted Jebel Ali, suspended Emirates SkyCargo, and added 2–4 weeks to electronics logistics. The memory shortage and geopolitical shock are compounding simultaneously in one of the world's highest-growth secondary markets.</div>
         </div>
       </div>
-
       <div class="insight">
         <div class="insight-marker"><span>4</span></div>
         <div class="insight-content">
@@ -641,7 +683,6 @@
           <div class="insight-body">An estimated <span class="stat-inline">150 million</span> high-value smartphones sit unused in US homes. The organized take-back rate from primary upgrades is just <span class="stat-inline">17%</span>. ecoATM collected 7.5M devices across 7,000 US kiosks in 2025. Operators who unlock latent supply — through better trade-in programs, kiosk access, and carrier partnerships — will own this cycle.</div>
         </div>
       </div>
-
       <div class="insight">
         <div class="insight-marker"><span>5</span></div>
         <div class="insight-content">
@@ -649,12 +690,10 @@
           <div class="insight-body">Over <span class="stat-inline">$4.3 billion</span> flowed into secondary market infrastructure in 2024. Back Market raised $510M. Refurbed acquired Swappie. Samsung, Google, and Apple all launched new certified trade-in programs in 2025. The competitive landscape is professionalizing faster than many operators anticipated.</div>
         </div>
       </div>
-
     </div>
 
     <hr class="divider">
 
-    <!-- CTA BLOCK -->
     <div class="cta-block">
       <div class="cta-eyebrow">Full Research Available</div>
       <div class="cta-headline">Secondary Market Intelligence Report<br>— May 2026 Edition</div>
@@ -671,7 +710,7 @@
         <span class="cta-tag">Dubai deep-dive</span>
       </div>
       <div class="cta-action">
-        <button class="btn-primary" onclick="document.querySelector('.modal-overlay').classList.add('open')">
+        <button class="btn-primary" onclick="openModal()">
           Request the Full 20-Page Report
         </button>
         <button class="btn-secondary" onclick="copyPost()">
@@ -680,12 +719,10 @@
       </div>
     </div>
 
-    <!-- CLOSING LINE -->
     <p class="closing">
       The secondary market will mirror whoever is winning new. Right now — and for the foreseeable future — that's Apple. Brand selection, inventory strategy, and trade-in access are the three levers that will separate winners from losers through 2027.
     </p>
 
-    <!-- TAGS -->
     <div class="tags">
       <span class="tag">#SecondaryMarket</span>
       <span class="tag">#Resale</span>
@@ -704,58 +741,42 @@
 
   </div>
 
-  <!-- COPY BUTTON -->
   <button class="copy-btn" onclick="copyPost()">Copy LinkedIn Post Text</button>
 
 </div>
 
-<!-- REQUEST REPORT MODAL -->
-<div class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="modal">
-    <div id="form-view">
-      <div class="modal-title">Request the Full 20-Page Report</div>
-      <p class="modal-sub">Enter your details and we'll send the complete 20-page Secondary Market Intelligence Report — May 2026 Edition — directly to your inbox.</p>
+<!-- ═══════════════════════════════════════════
+     MODAL — Google Form
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleBackdropClick(event)">
+  <div class="modal" id="modal-panel" role="dialog" aria-modal="true" aria-label="Request the 20-Page Report">
 
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">First Name</label>
-          <input class="form-input" type="text" placeholder="Jane">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Last Name</label>
-          <input class="form-input" type="text" placeholder="Smith">
-        </div>
+    <div class="modal-header">
+      <div>
+        <div class="modal-eyebrow">Full Research Available</div>
+        <div class="modal-title">Request the 20-Page Report</div>
       </div>
-
-      <div class="form-group">
-        <label class="form-label">Work Email</label>
-        <input class="form-input" type="email" placeholder="jane@company.com">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Company / Organisation</label>
-        <input class="form-input" type="text" placeholder="Acme Resellers Ltd">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Role</label>
-        <input class="form-input" type="text" placeholder="Head of Procurement">
-      </div>
-
-      <div class="modal-actions">
-        <button class="modal-submit" onclick="submitForm()">Send Me the Report</button>
-        <button class="modal-cancel" onclick="document.querySelector('.modal-overlay').classList.remove('open')">Cancel</button>
-      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
     </div>
 
-    <div class="success-msg" id="success-view">
-      <span class="check">✓</span>
-      <p><strong>Request received.</strong><br>We'll send the full report to your inbox within one business day. Thank you for your interest in the Secondary Market Intelligence Report.</p>
+    <div class="modal-sub">
+      Fill out the form below and we'll send the complete Secondary Market Intelligence Report — May 2026 Edition — to your inbox.
     </div>
+
+    <div class="gform-wrap">
+      <iframe
+        id="gform-iframe"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSclb3Q0Quw-pAOFuVKk4nALwSh4nlLDmjQp-SpF0N6gO61v5A/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Request the Secondary Market Intelligence Report"
+        loading="lazy">Loading…</iframe>
+    </div>
+
   </div>
 </div>
 
-<!-- Hidden post text for copy -->
 <textarea id="post-text">
 🔍 The Secondary Market's Defining Moment — and the Brands That Will Win
 
@@ -790,29 +811,79 @@ Sources: IDC · Counterpoint Research · CCS Insight · Omdia · Mordor Intellig
 </textarea>
 
 <script>
-function copyPost() {
-  const text = document.getElementById('post-text').value.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const btns = document.querySelectorAll('.copy-btn, .btn-secondary');
-    btns.forEach(b => {
-      if (b.textContent.includes('Copy')) {
-        const orig = b.textContent;
+  /* ─── Responsive iframe height ─── */
+  function setIframeHeight() {
+    var iframe = document.getElementById('gform-iframe');
+    if (!iframe) return;
+    var vw = window.innerWidth;
+    if (vw <= 480) {
+      // Full-screen modal: fill viewport minus sticky header (~110px)
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      iframe.style.height = Math.max(vh - 112, 500) + 'px';
+    } else if (vw <= 768) {
+      iframe.style.height = '860px';
+    } else {
+      iframe.style.height = '1014px';
+    }
+  }
+
+  /* ─── Modal open / close ─── */
+  function openModal() {
+    var overlay = document.getElementById('modal-overlay');
+    overlay.classList.add('open');
+    overlay.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+    setIframeHeight();
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleBackdropClick(e) {
+    if (e.target === document.getElementById('modal-overlay')) {
+      closeModal();
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  window.addEventListener('resize', function() {
+    if (document.getElementById('modal-overlay').classList.contains('open')) {
+      setIframeHeight();
+    }
+  });
+
+  /* ─── Copy post text ─── */
+  function copyPost() {
+    var text = document.getElementById('post-text').value.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(flashCopied).catch(legacyCopy);
+    } else {
+      legacyCopy();
+    }
+  }
+
+  function legacyCopy() {
+    var ta = document.getElementById('post-text');
+    ta.style.cssText = 'position:fixed;left:0;top:0;opacity:0;';
+    ta.select();
+    try { document.execCommand('copy'); flashCopied(); } catch(e) {}
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+  }
+
+  function flashCopied() {
+    document.querySelectorAll('.copy-btn, .btn-secondary').forEach(function(b) {
+      if (b.textContent.indexOf('Copy') > -1) {
+        var orig = b.textContent;
         b.textContent = '✓ Copied';
-        setTimeout(() => b.textContent = orig, 2500);
+        setTimeout(function() { b.textContent = orig; }, 2500);
       }
     });
-  });
-}
-
-function submitForm() {
-  document.getElementById('form-view').style.display = 'none';
-  document.getElementById('success-view').style.display = 'block';
-  setTimeout(() => {
-    document.querySelector('.modal-overlay').classList.remove('open');
-    document.getElementById('form-view').style.display = 'block';
-    document.getElementById('success-view').style.display = 'none';
-  }, 4000);
-}
+  }
 </script>
 
 </body>
