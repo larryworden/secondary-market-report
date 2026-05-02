@@ -87,6 +87,41 @@
     color: var(--light);
     line-height: 1.6;
     max-width: 520px;
+    margin-bottom: 24px;
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid rgba(255,140,0,0.5);
+    color: var(--orange);
+    padding: 10px 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-cta:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--navy);
+  }
+
+  .header-cta:hover .header-cta-arrow { transform: translateX(3px); }
+
+  .header-cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-style: normal;
   }
 
   /* BODY */
@@ -302,7 +337,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 22px;
   }
 
   .cta-tag {
@@ -340,24 +374,6 @@
 
   .btn-primary:hover { background: #ffaa33; }
   .btn-primary:active { transform: scale(0.97); }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--light);
-    border: 1px solid #3a3a5a;
-    padding: 11px 24px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: border-color 0.2s, color 0.2s;
-    white-space: nowrap;
-  }
-
-  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
 
   .closing {
     font-size: clamp(13px, 2vw, 14px);
@@ -397,24 +413,6 @@
     padding-top: 16px;
     line-height: 1.7;
   }
-
-  .copy-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background: var(--navy);
-    color: var(--cream);
-    border: none;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .copy-btn:hover { background: var(--orange); color: var(--navy); }
-  .copy-btn:active { transform: scale(0.99); }
 
   /* ═══════════════════════════════════════════
      MODAL — Google Form Panel
@@ -518,9 +516,6 @@
     /* height set by JS per device */
   }
 
-  /* Hidden textarea */
-  #post-text { position: absolute; left: -9999px; top: 0; }
-
   /* ═══════════════════════════════════════════
      RESPONSIVE — Tablet ≤768px
   ═══════════════════════════════════════════ */
@@ -541,8 +536,7 @@
       align-items: stretch;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    .btn-primary {
       text-align: center;
       padding: 14px 20px;
     }
@@ -568,8 +562,6 @@
 
     .tags { gap: 6px; }
     .tag  { font-size: 9px; padding: 4px 8px; }
-
-    .copy-btn { font-size: 9px; padding: 14px; }
 
     /* Full-screen modal on mobile */
     .modal-overlay {
@@ -620,6 +612,9 @@
       <em>Defining Moment</em>
     </h1>
     <p class="post-subhead">Memory crisis. Geopolitical shock. A permanent pricing reset. Here is what the data says — and which brands will win.</p>
+    <button class="header-cta" onclick="openModal()">
+      Request the Full 20-Page Report <span class="header-cta-arrow">→</span>
+    </button>
   </div>
 
   <!-- BODY -->
@@ -709,14 +704,7 @@
         <span class="cta-tag">Trade-in ecosystem</span>
         <span class="cta-tag">Dubai deep-dive</span>
       </div>
-      <div class="cta-action">
-        <button class="btn-primary" onclick="openModal()">
-          Request the Full 20-Page Report
-        </button>
-        <button class="btn-secondary" onclick="copyPost()">
-          Copy Post Text
-        </button>
-      </div>
+
     </div>
 
     <p class="closing">
@@ -740,8 +728,6 @@
     </div>
 
   </div>
-
-  <button class="copy-btn" onclick="copyPost()">Copy LinkedIn Post Text</button>
 
 </div>
 
@@ -777,39 +763,6 @@
   </div>
 </div>
 
-<textarea id="post-text">
-🔍 The Secondary Market's Defining Moment — and the Brands That Will Win
-
-Global smartphone shipments are falling 12.9% in 2026. Average selling prices are hitting a record $523. The Strait of Hormuz is partially closed. And 150 million high-value phones sit unused in American homes.
-
-The secondary market has never had a more compelling structural case — or a more complex operating environment.
-
-Here are 5 things every secondary market operator needs to know right now:
-
-1️⃣ THE MEMORY CRISIS IS STRUCTURAL, NOT CYCLICAL
-Samsung, SK Hynix, and Micron have permanently reallocated DRAM/NAND capacity to AI datacenters. New fab capacity won't reach volume until 2027. The sub-$100 smartphone segment — 171M devices — is, in IDC's words, permanently uneconomical. There is no return to business as usual.
-
-2️⃣ BRAND SELECTION HAS NEVER MATTERED MORE
-Apple led the global primary market for the first time in Q1 2026 (21% share, +5% YoY) — the only top brand growing. iPhones retain 60–70% of value after two years. Xiaomi fell -19% YoY. The secondary market mirrors whoever wins new.
-
-3️⃣ THE MIDDLE EAST IS A COMPOUND CRISIS IN REAL TIME
-IDC projects MEA new smartphone shipments down -20.6% in 2026 — the steepest regional decline globally. The Strait of Hormuz closure has disrupted Jebel Ali, suspended Emirates SkyCargo, and added 2–4 weeks to electronics logistics. The memory shortage and geopolitical shock are compounding simultaneously.
-
-4️⃣ SUPPLY IS THE DEFINING CONSTRAINT — AND THE BIGGEST OPPORTUNITY
-150 million high-value smartphones sit unused in US homes. The organized trade-in take-back rate is just 17%. ecoATM collected 7.5M devices across 7,000 US kiosks in 2025. Operators who unlock latent supply will own this cycle.
-
-5️⃣ CAPITAL IS PROFESSIONALIZING THE MARKET AT SPEED
-$4.3 billion flowed into secondary market infrastructure in 2024. Back Market raised $510M. Refurbed acquired Swappie. Samsung, Google, and Apple all launched new certified trade-in programs in 2025. The competitive landscape is professionalizing faster than many anticipated.
-
-The secondary market will mirror whoever is winning new. Right now — and for the foreseeable future — that's Apple.
-
-📩 DM me to request the full 20-page Secondary Market Intelligence Report — May 2026 Edition. 20 pages. 15+ cited sources. Full regional breakdown, brand analysis, Dubai deep-dive, and trade-in ecosystem coverage.
-
-Sources: IDC · Counterpoint Research · CCS Insight · Omdia · Mordor Intelligence · ecoATM · WTO
-
-#SecondaryMarket #Resale #SmartphoneMarket #Apple #MemoryShortage #TradeIn #Premiumization #Dubai #MarketIntelligence
-</textarea>
-
 <script>
   /* ─── Responsive iframe height ─── */
   function setIframeHeight() {
@@ -817,7 +770,6 @@ Sources: IDC · Counterpoint Research · CCS Insight · Omdia · Mordor Intellig
     if (!iframe) return;
     var vw = window.innerWidth;
     if (vw <= 480) {
-      // Full-screen modal: fill viewport minus sticky header (~110px)
       var vh = window.innerHeight || document.documentElement.clientHeight;
       iframe.style.height = Math.max(vh - 112, 500) + 'px';
     } else if (vw <= 768) {
@@ -856,34 +808,6 @@ Sources: IDC · Counterpoint Research · CCS Insight · Omdia · Mordor Intellig
       setIframeHeight();
     }
   });
-
-  /* ─── Copy post text ─── */
-  function copyPost() {
-    var text = document.getElementById('post-text').value.trim();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(flashCopied).catch(legacyCopy);
-    } else {
-      legacyCopy();
-    }
-  }
-
-  function legacyCopy() {
-    var ta = document.getElementById('post-text');
-    ta.style.cssText = 'position:fixed;left:0;top:0;opacity:0;';
-    ta.select();
-    try { document.execCommand('copy'); flashCopied(); } catch(e) {}
-    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
-  }
-
-  function flashCopied() {
-    document.querySelectorAll('.copy-btn, .btn-secondary').forEach(function(b) {
-      if (b.textContent.indexOf('Copy') > -1) {
-        var orig = b.textContent;
-        b.textContent = '✓ Copied';
-        setTimeout(function() { b.textContent = orig; }, 2500);
-      }
-    });
-  }
 </script>
 
 </body>
