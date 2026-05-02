@@ -94,9 +94,9 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: transparent;
-    border: 1px solid rgba(255,140,0,0.5);
-    color: var(--orange);
+    background: var(--orange);
+    border: 1px solid var(--orange);
+    color: var(--navy);
     padding: 10px 20px;
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -105,15 +105,19 @@
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 2px;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
     position: relative;
     z-index: 1;
   }
 
   .header-cta:hover {
-    background: var(--orange);
-    border-color: var(--orange);
+    background: #ffaa33;
+    border-color: #ffaa33;
     color: var(--navy);
+  }
+
+  .header-cta:active {
+    transform: scale(0.98);
   }
 
   .header-cta:hover .header-cta-arrow { transform: translateX(3px); }
@@ -349,32 +353,6 @@
     border-radius: 2px;
   }
 
-  .cta-action {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--orange);
-    color: var(--navy);
-    border: none;
-    padding: 12px 24px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: background 0.2s, transform 0.1s;
-    white-space: nowrap;
-  }
-
-  .btn-primary:hover { background: #ffaa33; }
-  .btn-primary:active { transform: scale(0.97); }
-
   .closing {
     font-size: clamp(13px, 2vw, 14px);
     font-style: italic;
@@ -414,9 +392,7 @@
     line-height: 1.7;
   }
 
-  /* ═══════════════════════════════════════════
-     MODAL — Google Form Panel
-  ═══════════════════════════════════════════ */
+  /* MODAL — Google Form Panel */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -523,9 +499,7 @@
     border: none;
   }
 
-  /* ═══════════════════════════════════════════
-     RESPONSIVE — Tablet ≤768px
-  ═══════════════════════════════════════════ */
+  /* RESPONSIVE — Tablet ≤768px */
   @media (max-width: 768px) {
     body { padding: 0 0 60px; }
     .wrapper { max-width: 100%; }
@@ -538,12 +512,7 @@
 
     .cta-block { padding: 22px 20px; }
 
-    .cta-action {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .btn-primary {
+    .header-cta {
       text-align: center;
       padding: 14px 20px;
     }
@@ -552,9 +521,7 @@
     .modal-sub    { padding: 12px 20px 14px; }
   }
 
-  /* ═══════════════════════════════════════════
-     RESPONSIVE — Mobile ≤480px
-  ═══════════════════════════════════════════ */
+  /* RESPONSIVE — Mobile ≤480px */
   @media (max-width: 480px) {
     .post-header { padding: 22px 16px 20px; }
     .post-body   { padding: 22px 16px 28px; }
@@ -568,7 +535,6 @@
     .tags { gap: 6px; }
     .tag  { font-size: 9px; padding: 4px 8px; }
 
-    /* Full-screen modal on mobile */
     .modal-overlay { padding: 12px 8px; }
 
     .modal {
@@ -640,6 +606,7 @@
           <div class="insight-body">Samsung, SK Hynix, and Micron have permanently reallocated DRAM and NAND capacity to AI datacenters. New fab capacity won't reach volume until 2027. The sub-$100 smartphone segment — <span class="stat-inline">171M devices</span> — is, in IDC's words, permanently uneconomical. There is no return to business as usual.</div>
         </div>
       </div>
+
       <div class="insight">
         <div class="insight-marker"><span>2</span></div>
         <div class="insight-content">
@@ -647,6 +614,7 @@
           <div class="insight-body">Apple led the global primary market for the first time in Q1 2026 with <span class="stat-inline">21% share and +5% YoY growth</span> — the only top brand growing. iPhones retain 60–70% of value after two years. Xiaomi fell <span class="stat-inline">-19% YoY</span>, the sharpest decline among the top five. The secondary market mirrors whoever wins new.</div>
         </div>
       </div>
+
       <div class="insight">
         <div class="insight-marker"><span>3</span></div>
         <div class="insight-content">
@@ -654,6 +622,7 @@
           <div class="insight-body">IDC projects Middle East & Africa new smartphone shipments down <span class="stat-inline">-20.6%</span> in 2026 — the steepest regional decline globally. The Strait of Hormuz closure has disrupted Jebel Ali, suspended Emirates SkyCargo, and added 2–4 weeks to electronics logistics. The memory shortage and geopolitical shock are compounding simultaneously in one of the world's highest-growth secondary markets.</div>
         </div>
       </div>
+
       <div class="insight">
         <div class="insight-marker"><span>4</span></div>
         <div class="insight-content">
@@ -661,6 +630,7 @@
           <div class="insight-body">An estimated <span class="stat-inline">150 million</span> high-value smartphones sit unused in US homes. The organized take-back rate from primary upgrades is just <span class="stat-inline">17%</span>. ecoATM collected 7.5M devices across 7,000 US kiosks in 2025. Operators who unlock latent supply — through better trade-in programs, kiosk access, and carrier partnerships — will own this cycle.</div>
         </div>
       </div>
+
       <div class="insight">
         <div class="insight-marker"><span>5</span></div>
         <div class="insight-content">
@@ -687,7 +657,6 @@
         <span class="cta-tag">Trade-in ecosystem</span>
         <span class="cta-tag">Dubai deep-dive</span>
       </div>
-
     </div>
 
     <p class="closing">
@@ -714,9 +683,7 @@
 
 </div>
 
-<!-- ═══════════════════════════════════════════
-     MODAL — Google Form
-═══════════════════════════════════════════ -->
+<!-- MODAL — Google Form -->
 <div class="modal-overlay" id="modal-overlay" onclick="handleBackdropClick(event)">
   <div class="modal" id="modal-panel" role="dialog" aria-modal="true" aria-label="Request the 20-Page Report">
 
@@ -747,7 +714,6 @@
 </div>
 
 <script>
-  /* ─── Modal open / close ─── */
   function openModal() {
     var overlay = document.getElementById('modal-overlay');
     overlay.classList.add('open');
